@@ -38,10 +38,10 @@ app.get("/", function (request, response) {
       form = false;
     }
   } else {
-    emoji = Emoji;
+    emoji = false;
   }
   response.render('index', {
-    emoji:JSON.stringify(emoji),
+    emoji: JSON.stringify(emoji),
     blank: JSON.stringify(blank),
     form: form
   });
