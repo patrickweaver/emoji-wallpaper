@@ -30,6 +30,9 @@ function moreEmojis(){
   var x = Math.floor(Math.random() * xMax) - 50;
   var y = Math.floor(Math.random() * yMax) - 50;
   var size = Math.floor(Math.random() * 400) + 100;
+  if (!selectedEmoji) {
+    selectedEmoji = emoji;
+  }
   var em = selectedEmoji[Math.floor(Math.random() * (selectedEmoji.length))];
   var e = document.createElement("div");
   e.className = "emoji";
