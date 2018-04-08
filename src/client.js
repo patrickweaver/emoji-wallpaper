@@ -19,11 +19,14 @@ if (hideButton) {
 }
 
 function moreEmojis(){
-  var yMax = document.body.clientHeight + 100;
-  var xMaxBody = document.body.clientWidth + 100;
+  var yMaxBody = document.documentElement.clientHeight + 700;
+  var xMaxBody = document.documentElement.clientWidth + 100;
+  var yMaxWindow = window.innerHeight; + 100;
   var xMaxWindow = window.innerWidth; + 100;
   
   var xMax = xMaxBody > xMaxWindow ? xMaxBody : xMaxWindow;
+  var yMax = yMaxBody > yMaxWindow ? yMaxBody : yMaxWindow;
+  console.log("BODY: " + yMaxBody + "   ___ WINDOW: " + yMaxWindow);
   document.getElementById("container").style.width = xMax;
   document.getElementById("container").style.height = yMax;
   
