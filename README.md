@@ -1,2 +1,1 @@
-# emoji-wallpaper
-A generative art project using emojis
+# Emoji Wallpaper

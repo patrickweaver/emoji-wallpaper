@@ -1,0 +1,26 @@
+{
+  "name": "emojiwallpaper",
+  "version": "0.0.1",
+  "description": "A generative art emoji wallpaper creator",
+  "main": "server.js",
+  "scripts": {
+    "start": "browserify src/client.js > public/client.js && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "browserify": "^16.1.1"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/emojiwallpaper"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

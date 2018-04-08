@@ -1,0 +1,81 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  
+}
+
+#root {
+  position: relative;
+  z-index: -1;
+}
+
+.emoji {
+  position: absolute;
+  z-index: -1;
+}
+
+#input {
+  width: 90%;
+  max-width: 600px;
+  font-size: 125%;
+  margin: 2em auto;
+  z-index: 1;
+  background: rgba(255, 255, 255, .7);
+  padding: 10px;
+}
+
+#input > p {
+  text-align: left;
+}
+
+textarea {
+  font-size: 150%;
+  display: block;
+  width: 80%;
+  margin: 1em 10%;
+  height: 10em;
+}
+
+#submit-button {
+  font-size: 150%;
+  padding: .15em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #aaf;
+}
+
+#to-form {
+  width: 80%;
+  margin: 0 10%;
+  background: rgba(255, 255, 255, .8);
+  padding: 3px;
+  position: absolute;
+  top: 0;
+}
+
+h4 {
+  margin: .25em;
+}
+
+#hide-link {
+  text-decoration: underline;
+  margin: .25em 0;
+  display: inline-block;
+  cursor: pointer;
+}
+  
