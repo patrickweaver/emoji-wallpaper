@@ -12,16 +12,6 @@ var Emoji = require('./src/allEmoji');
 app.get("/", function (request, response) {
   var form = "";
   var emoji = [];
-  console.log("Request!");
-  console.log(request.query);
-  console.log(request.query.length);
-  
-  var query = request.query;
-  for (var k in query) {
-    var v = query[k];
-    console.log(v);
-  }
-  
   var query = request.query;
   var count = 0;
   var valid = false;
