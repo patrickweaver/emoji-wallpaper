@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emoji Wallpaper</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/bb169cf5-da65-43b7-822e-57f37365293d%2Ffactory_1f3ed.png?1522544717829" type="image/x-icon">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script>
+      var selectedEmoji = {{{ emoji }}};
+      var blank = {{{ blank }}};
+    </script>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/client.js" defer></script>
+  </head>  
+  <body>
+    <div id="container">
+    <div id="root"></div>
+    {{#if form}}
+      <div id="input">
+        <h1>
+          Generate your own emoji wallpaper:
+        </h1>
+        <p>
+          Add any emojis you want to include below. Add a space or new line between each emoji (or put two together if you always want them to appear together). If this page makes it too hard to fill out the form, try this one: <a href="https://emojiwallpaper.glitch.me/?no=emojis">emojiwallpaper.glitch.me/?no=emojis</a>.
+        </p>
+        <textarea id="emoji-input"></textarea>
+        <button id="submit-button">
+          📠 ➔
+        </button>
+      </div>
+    {{else}}
+      <div id="to-form">
+        <h4>
+          Make your own here: <a href="https://emojiwallpaper.glitch.me/?no=emojis">emojiwallpaper.glitch.me/?no=emojis</a>
+        </h4>
+        <p id="hide-link" >Hide this</p>
+      </div>
+    {{/if}}
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+     </div>
+  </body>
+</html>
