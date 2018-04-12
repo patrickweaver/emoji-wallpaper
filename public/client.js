@@ -2811,6 +2811,22 @@ function test() {
   alert("Test!");
 }
 
+var previousInput = "";
+var emojiInput = document.getElementById('emoji-input');
+if (emojiInput) {
+  emojiInput.addEventListener('input', function (evt) {
+    if (
+      this.value[this.value.length - 1] != "\n"
+      &&
+      this.value.length > previousInput.length
+    ) {
+      this.value = this.value + "\n";
+    }
+    previousInput = this.value;
+  });
+}
+
+
 var submitButton = document.getElementById('submit-button');
 if (submitButton) {
   submitButton.addEventListener('click', function() {
@@ -2856,7 +2872,10 @@ function generateNew() {
   var q = "?";
   var c = 0;
   for (var e in emojiInput) {
-    q += (c++) + "=" + emoji.indexOf(emojiInput[e]) + "&";
+    var nextEmoji = emoji.indexOf(emojiInput[e]);        
+    if (nextEmoji >= 0) {
+      q += (c++) + "=" + nextEmoji + "&";
+    }
   }
   q = q.slice(0, -1);
   window.location = "https://emojiwallpaper.glitch.me/" + q;
